@@ -1,0 +1,70 @@
+{{- define "main" -}}
+
+{{ $work_data := site.Data.work }}
+
+
+{{/*{{ $person_data }}*/}}
+
+{{ partial "page_subtitle.html" . }}
+
+<div class=" common-page-content page-work-wrap  page-contact-wrap">
+
+  <section class="work-intro">
+    <div class="container">
+      <p class="work-intro-text">I'm always interested in discussing new data analytics projects, business intelligence solutions, or potential collaborations. Feel free to reach out using any of the methods below.</p>
+    </div>
+  </section>
+
+
+  <section class="contact-options">
+    <div class="container">
+      <div class="row">
+
+        {{ range $index, $item := .Params.contacts }}
+          <div class="col-12 col-md-4 ">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="{{ $item.icon }}"></i>
+              </div>
+              <h3>{{ $item.type | markdownify  | emojify  }}</h3>
+              <p>
+                {{ with $item.link }}<a href="{{ . }}" target="_blank" >{{ end }}
+
+                  {{ $item.content | markdownify  | emojify  }}
+
+                {{ with $item.link }} </a>{{ end }}
+              </p>
+              <p class="contact-note">{{ $item.desc | markdownify  | emojify  }}</p>
+            </div>
+          </div>
+
+        {{ end }}
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Download Resources</h2>
+        <p>Access my resume and portfolio for more detailed information.</p>
+        <div class="cta-buttons">
+          <a href="{{ "uploads/cv.pdf" | relLangURL }}" class="btn primary"  target="_blank">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="{{ "uploads/portfolio.pdf" | relLangURL }}" class="btn secondary" target="_blank">
+            <i class="fas fa-briefcase"></i> View Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+{{- end -}}

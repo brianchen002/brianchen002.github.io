@@ -1,0 +1,116 @@
+{{- define "main" -}}
+
+{{ $work_data := site.Data.work }}
+
+
+{{/*{{ $person_data }}*/}}
+
+{{ partial "page_subtitle.html" . }}
+
+<div class=" common-page-content page-work-wrap">
+
+  <section class="work-intro">
+    <div class="container">
+      <p class="work-intro-text">Below are selected projects and professional experiences that demonstrate my expertise in data analytics, business intelligence, and practical technology solutions. Each entry showcases my commitment to creating meaningful impact through data-driven approaches.</p>
+    </div>
+  </section>
+
+
+  <section class="projects" >
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      {{ range $index, $item := $work_data.projects }}
+        <div class="project-detailed">
+          <div class="row">
+            <div class="col-12 col-md-4 ">
+              <div class="project-image">
+                <img class="project-img " src="{{ (printf "images/%s" $item.image) | relLangURL  }}" alt="" />
+              </div>
+
+            </div>
+            <div class="col-12 col-md-8 ">
+
+              <div class="project-description">
+                <div class="project-details">
+                    {{ $item.desc | markdownify  | emojify  }}
+                </div>
+
+                {{ with $item.links }}
+                  <div class="project-resources">
+                      {{ range $idx2, $item2 := . }}
+                        <a class="resource-link"  target="_blank"
+                           href="{{ $item2.url }}">
+                          <i class="{{$item2.icon}}"></i> {{ $item2.name | markdownify | emojify }}
+                        </a>
+                      {{ end }}
+                    </div>
+                {{ end }}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </section>
+
+
+
+  <section class="experience" >
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      {{ range $index, $item := $work_data.experience }}
+        <div class="experience-detailed">
+
+          <div class="experience-header">
+            <h3>{{ $item.title | markdownify  | emojify  }}</h3>
+            <p class="experience-company">{{ $item.place | markdownify  | emojify  }}</p>
+            <p class="experience-date">{{ $item.date_period | markdownify  | emojify  }}</p>
+          </div>
+          <div class="experience-content">
+              {{ $item.desc | markdownify  | emojify  }}
+
+              {{ with $item.links }}
+                <div class="experience-resources">
+                    {{ range $idx2, $item2 := . }}
+                      <a class="resource-link"  target="_blank"
+                         href="{{ $item2.url }}">
+                        <i class="{{$item2.icon}}"></i> {{ $item2.name | markdownify | emojify }}
+                      </a>
+                    {{ end }}
+                </div>
+              {{ end }}
+          </div>
+
+
+        </div>
+      {{ end }}
+
+    </div>
+  </section>
+
+
+
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Interested in Collaborating?</h2>
+        <p>Let's discuss how we can work together on your next data or business intelligence project.</p>
+        <div class="cta-buttons">
+          {{/*<a href="{{ "work" | relLangURL }}" class="btn primary">View My Work</a>*/}}
+          <a href="{{ "contact" | relLangURL }}" class="btn primary">Contact Me</a>
+          <a href="{{ "uploads/portfolio.pdf" | relLangURL }}" class="btn secondary" target="_blank">
+            <i class="fas fa-briefcase"></i> Download Portfolio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+
+{{- end -}}

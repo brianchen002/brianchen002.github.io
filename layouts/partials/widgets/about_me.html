@@ -1,0 +1,17 @@
+{{ $ := .root }}
+{{ $page := .page }}
+{{ $columns := $page.Params.design.columns | default "2" }}
+
+
+<div class="home-about-content common-page-content">
+  <div class="home-about-text">
+    <h2>About Me</h2>
+
+    {{ $page.Content }}
+
+    <a href="{{ "about" | relLangURL }}" class="btn primary">Read More</a>
+  </div>
+  <div class="home-about-image">
+    <img src="{{"images/work/p2.jpg" | relLangURL }}" class="about-img">
+  </div>
+</div>

@@ -1,0 +1,216 @@
+{{- define "main" -}}
+
+{{ $person_img := (.Page.Resources.ByType "image").GetMatch "*person*" }}
+{{ $person_data := site.Data.about }}
+
+
+{{/*{{ $person_data }}*/}}
+
+{{ partial "page_subtitle.html" . }}
+
+<div class=" common-page-content page-about-wrap">
+
+  <section class="about-intro" >
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 ">
+          <img class="person-img " src="{{ $person_img.RelPermalink }}" alt="{{.Title}}" />
+        </div>
+        <div class="col-12 col-md-8 d-flex " style="align-items: center;">
+          <div>
+              {{ .Content |  markdownify | emojify }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="education" >
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="row">
+          {{ range $index, $item := $person_data.education }}
+            <div class="col-12 col-md-6 ">
+              <div class="card-box" style="height: 28rem;">
+                <div class="c-title">{{ $item.major | markdownify  | emojify  }}</div>
+                <p class="c-org">{{ $item.school | markdownify | emojify  }}</p>
+                {{ with $item.minor }}<p class="c-minor">{{ . | markdownify | emojify  }}</p>{{ end }}
+                <p class="c-date">{{ $item.date_period | markdownify | emojify  }}</p>
+                <div>{{ $item.desc | markdownify | emojify  }}</div>
+              </div>
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="certification" >
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="row">
+          {{ range $index, $item := $person_data.certifications }}
+            <div class="col-12">
+              <div class="card-box" style="height: 24rem; background-color: #f9f9f9;">
+                <div class="c-title">{{ $item.name | markdownify  | emojify  }}</div>
+                <p class="c-org">{{ $item.org | markdownify | emojify  }}</p>
+                <p class="c-date">{{ $item.date_period | markdownify | emojify  }}</p>
+                <p class="">{{ $item.credential_id | markdownify | emojify  }}</p>
+                <div>{{ $item.desc | markdownify | emojify  }}</div>
+                {{ with $item.cert_link }}
+                <div>
+                  <a href="{{ . }}" target="_blank" class="resource-link">
+                    <i class="fas fa-certificate"></i> View Certificate
+                  </a>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="skills" >
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="row">
+          {{ range $index, $item := $person_data.skills }}
+            <div class="col-12 col-md-3 ">
+              <div class="card-box" style="height: 25rem;">
+                <div class="c-title" style="text-align: center;">
+                    {{ $item.name | markdownify  | emojify  }}
+                </div>
+
+                <ul class="skills-list">
+                  {{ range $index2, $item2 := $item.skill_items }}
+                    <li><i class="{{ $item2.icon }}"></i>
+                        {{ $item2.s_name | markdownify  | emojify  }}
+                    </li>
+                  {{ end }}
+                </ul>
+
+              </div>
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </section>
+
+
+  <section class="interests" >
+    <div class="container">
+      <h2 class="section-title">Interests & Activities</h2>
+      <div class="row">
+          {{ range $index, $item := $person_data.interests }}
+            <div class="col-12 col-md-3 ">
+              <div class="card-box"  style="height: 24rem; text-align: center; background-color: #f9f9f9;">
+
+                <div><i class="{{ $item.icon }}"></i></div>
+                <div class="c-title" style="text-align: center;">
+                    {{ $item.name | markdownify  | emojify  }}
+                </div>
+                <div>{{ $item.desc | markdownify | emojify  }}</div>
+
+              </div>
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="photography" >
+    <div class="container">
+      <h2 class="section-title">Photography & Adventures</h2>
+
+      {{ range $index, $item := $person_data.photography }}
+        <div class="photography-section">
+            <div class="c-title" style="text-align: center;">
+                {{ $item.type | markdownify  | emojify  }}
+            </div>
+            <p class="" style="text-align: center; margin: 0 auto 2rem auto">
+                {{ $item.desc | markdownify | emojify  }}
+            </p>
+            <div class="row photography-grid">
+                {{ range $index2, $item2 := $item.gallery }}
+                  <div class="col-12 col-md-4 ">
+                    <div class="photography-item">
+                      <img class="photography-img " src="{{ (printf "images/%s" $item2.image) | relLangURL  }}" alt="" />
+                      <div class="photography-caption">
+                          {{ $item2.img_desc | markdownify  | emojify  }}
+                      </div>
+                    </div>
+                  </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Collaborate?</h2>
+        <p>View my work or get in touch to discuss potential projects.</p>
+        <div class="cta-buttons">
+          <a href="{{ "work" | relLangURL }}" class="btn primary">View My Work</a>
+          <a href="{{ "contact" | relLangURL }}" class="btn secondary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+{{/*  lightbox*/}}
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">×</span>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+  <script>
+    // Lightbox functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryItems = document.querySelectorAll('.photography-item');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const img = this.querySelector('img');
+          const caption = this.querySelector('.photography-caption').textContent;
+
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightboxCaption.textContent = caption;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightboxClose.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+      });
+
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          lightbox.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+
+
+{{- end -}}

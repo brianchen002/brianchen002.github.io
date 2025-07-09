@@ -1,0 +1,111 @@
+education:
+
+  - major: "MS, Information Systems"
+    school: "University of Washington, Foster School of Business"
+    minor: ""
+    date_period: "Expected June 2025 | GPA: 3.89"
+    desc: |
+      Focusing on data analytics, business intelligence, and system optimization
+
+  - major: "BS, Business Administration"
+    school: "University of Oregon, Lundquist College of Business"
+    minor: "Economics"
+    date_period: "October 2019 - June 2023 | GPA: 3.87"
+    desc: |
+      - Made Dean's list 7 times
+      - Awarded 4 different merit-based scholarships
+      - Participated in wine marketing program in Siena, Italy
+      - Tour guide and member of Oregon College Tour Cast
+      - View College Tour Video
+
+
+certifications:
+  - name: "Data Analyst Certificate"
+    org: "DataCamp"
+    date_period: "Issued Jan 2025 · Expires Jan 2027"
+    credential_id: "Credential ID DA0022400027263"
+    desc: |
+      - Scored 188 on DA101 certification (119% above required average)
+      - Achieved score of 148 on DA202 certification (85% above required average)
+    cert_link: "https://farrellr25.github.io/assets/documents/DataAnalystCertificate.pdf"
+
+
+skills:
+  - name: "Data Engineering"
+    skill_items:
+      - icon: "fas fa-database"
+        s_name: "Data pipeline creation (Databricks)"
+      - icon: "fas fa-exchange-alt"
+        s_name: "Data integration"
+
+
+  - name: "Data Analysis"
+    skill_items:
+      - icon: "fas fa-chart-line"
+        s_name: "Data visualization (Power BI)"
+      - icon: "fas fa-calculator"
+        s_name: "Statistical analysis"
+
+
+  - name: "Programming & Tools"
+    skill_items:
+      - icon: "fab fa-python"
+        s_name: "Python (Pandas, NumPy, Seaborn, Matplotlib, Sklearn, PyTorch)"
+      - icon: "fas fa-table"
+        s_name: "SQL"
+
+  - name: "Business & Soft Skills"
+    skill_items:
+      - icon: "fas fa-lightbulb"
+        s_name: "Problem-solving"
+
+      - icon: "fas fa-users"
+        s_name: "Team leadership"
+
+
+interests:
+  - icon: "fas fa-hiking"
+    name: "Outdoor Activities"
+    desc: |
+      Skiing, hiking, backpacking, and drone photography in the beautiful Pacific Northwest
+
+  - icon: "fas fa-globe-americas"
+    name: "International Experience"
+    desc: |
+      Grew up with 14 exchange students from various countries
+
+      Studied wine marketing in Siena, Italy
+
+  - icon: "fas fa-laptop-code"
+    name: "Technical Projects"
+    desc: |
+      Building optimization algorithms and data visualization dashboards
+
+  - icon: "fas fa-book"
+    name: "Continuous Learning"
+    desc: |
+      Regularly pursuing new certifications and learning opportunities in data science
+
+
+
+photography:
+  - type: "Skiing Adventures"
+    desc: "One of my favorite hobbies is skiing. I enjoy hitting the slopes whenever possible!"
+    gallery:
+      - image: "about/s1.jpg"
+        img_desc: "My brother and I skiing at Whistler Blackcomb BC, Canada"
+      - image: "about/s2.jpg"
+        img_desc: "Attending a Boeing Snoqualmie event with my MS Information Systems classmates"
+      - image: "about/s3.jpg"
+        img_desc: "Me skiing with my roommate at Mount Bachelor in Bend, Oregon"
+
+  - type: "Drone Photography"
+    desc: "I enjoy capturing beautiful aerial shots with my DJI Mavic Air 2 drone."
+    gallery:
+      - image: "about/d1.jpg"
+        img_desc: "Deady Hall at University of Oregon - the first building on campus"
+      - image: "about/d2.jpg"
+        img_desc: "Autzen Stadium - home of University of Oregon Football"
+      - image: "about/d3.jpg"
+        img_desc: "Knight Campus - state of the art innovation lab where I used 3D printing to build Stormrider prototypes in carbon fiber"
+

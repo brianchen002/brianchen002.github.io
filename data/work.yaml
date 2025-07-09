@@ -1,0 +1,103 @@
+projects:
+  - image: "work/p1.jpg"
+    links: ""
+    desc: |
+      ## Automated High School Master Schedule Builder
+      _August 2024 - Present_
+
+      ### Background
+      Chico High School is a high school located in Chico, CA with a approximately 2,000 students and 87 teachers.
+
+      ### Problem
+      - **Manual Scheduling Limitations**: The existing method for building the master schedule was a manual process that typically took 3 months to complete and involved numerous variables, making it challenging to manage manually.
+      - **Conflict Ratio**: Manual allocation achieved an 85% conflict-free rate, meaning 15% of students couldn't enroll in preferred classes.
+      - **Resource Constraints**: Difficulty balancing teacher schedules and classroom utilization efficiently.
+
+      ### Objective
+      Develop an automated scheduling solution to streamline class allocation and minimize student conflicts.
+
+      ### Action
+      - Created a custom Registrar LLM agent to analyze scheduling constraints and student preferences.
+      - Implemented Gurobi Optimization model running on AWS high-performance instances.
+      - Developed an Excel output to visualize the schedule and allow for easy adjustments.
+      - Successfully scaled the solution to handle the full student body of 1,600 students.
+
+      ### Outcome
+      - Improved conflict free scheduling ~11% while reducing process time from 3 months to hours.
+      - Created a reusable, automated framework that optimizes teacher and classroom resource allocation.
+
+
+
+
+
+
+  - image: "work/p2.jpg"
+    links:
+      - name: Honors College Thesis
+        icon: "fas fa-file-pdf"
+        url: "https://farrellr25.github.io/assets/documents/Stormrider%20Honors%20college%20Thesis.pdf"
+      - name: Winning Photo
+        icon: "fas fa-image"
+        url: "https://farrellr25.github.io/assets/images/Stormrider%20Holding%20Check%20after%20winning%20InventOregon.jpg"
+      - name:  Prototype Image
+        icon: "fas fa-image"
+        url: "https://farrellr25.github.io/assets/images/infographic/Prototype.jfif"
+    desc: |
+      ## Stormrider - Data-Driven Product Development
+      _January 2022 - June 2023_
+
+      ### Overview
+      Founded Stormrider, LLC to develop an innovative skateboard accessory utilizing data-driven market research and carbon fiber manufacturing techniques. Led all aspects from concept to production.
+
+      ### Technical Approach
+      - Performed market analysis to identify underserved segments and customer needs
+      - Conducted quantitative A/B testing for evidence-based product optimization
+      - Created financial projection models for business planning and pricing strategy
+      - Used Python for social media sentiment analysis to identify customer pain points
+      - Developed a business intelligence dashboard to track key performance indicators
+
+      ### Results
+      Secured 2nd place in Invent Oregon competition ($7.5K prize) and raised a total of $12.5K through various pitch competitions and innovation grants. Featured in Oregon Business Magazine.
+
+
+
+experience:
+
+  - title: "Management Trainee"
+    place: "Cintas (Fortune 500 company, $8B revenue in 2023, Fire Protection Division)"
+    date_period: "July 2023 - June 2024"
+    desc: |
+      ### Role Overview
+      Participated in Cintas's Management Trainee program within the Fire Protection Division, focusing on Business Operations, Management, Finance, and process optimization.
+
+      ### Key Accomplishments
+      - Analyzed survey data from 500+ respondents using Python, identifying key themes and cross-selling pain points for VPs.
+      - Cataloged 7,000+ inventory items worth $40,000, improving stock management and enabling future sales opportunities.
+      - Led onboarding for a top 10 client, overseeing fire extinguisher services and training new operations employee on-site.
+
+      ### Skills Applied
+      Data analysis, Python programming, SQL, Power BI, business intelligence, inventory management, client relations, team leadership, process optimization
+
+    links: ""
+
+  - title: "College Tour Guide & Cast Member"
+    place: "University of Oregon"
+    date_period: "September 2021 - June 2023"
+    desc: |
+      ### Role Overview
+      Selected to represent the University of Oregon as both a tour guide and member of the official College Tour Cast for "The College Tour," an Amazon Prime series, showcasing the university to prospective students and families.
+
+      ### Key Responsibilities
+      - Conducted campus tours for groups of up to 30 prospective students and families
+      - Presented information about academic programs, campus life, and university resources
+      - Participated in promotional videos and virtual tour content creation
+      - Represented the university at recruitment events
+
+      ### Skills Applied
+      Public speaking, leadership, customer service, relationship building, communication, problem-solving
+
+    links:
+      - name: View College Tour Video
+        icon: "fas fa-video"
+        url: "https://vimeo.com/672121380"
+

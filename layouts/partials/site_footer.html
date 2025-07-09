@@ -1,0 +1,25 @@
+<footer class="site-footer">
+
+
+  <div class="container">
+    <div class="footer-content">
+      <p>© <span id="copy_right_year"></span> {{ site.Title }}. All rights reserved.</p>
+      <div class="footer-downloads">
+        <a href="{{ "uploads/cv.pdf" | relLangURL }}" class="btn secondary btn-sm" target="_blank">
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <a href="{{ "uploads/portfolio.pdf" | relLangURL }}" class="btn secondary btn-sm" target="_blank">
+          <i class="fas fa-briefcase"></i> Portfolio
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      $('#copy_right_year').html((new Date()).getFullYear());
+    });
+
+  </script>
+
+
+</footer>

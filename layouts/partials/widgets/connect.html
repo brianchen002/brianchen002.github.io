@@ -1,0 +1,28 @@
+{{/* People Widget */}}
+
+{{/* Initialise */}}
+{{ $ := .root }}
+{{ $page := .page }}
+
+
+<div class="common-page-content">
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>{{ $page.Title }}</h2>
+        <p>Interested in discussing data analytics, business intelligence solutions, or project collaboration?</p>
+        <div class="cta-buttons">
+          <a href="mailto: {{ $page.Params.links.email }}" class="btn primary">
+            <i class="fas fa-envelope"></i> Email Me
+          </a>
+          <a href="{{ $page.Params.links.linkedin }}" class="btn secondary">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="{{ "contact" | relLangURL }}" class="btn primary">Contact Page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
