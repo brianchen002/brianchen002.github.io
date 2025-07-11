@@ -43,7 +43,7 @@ highlights:
       - Improved educational experience for 1,600+ students
     link:
       text: See Projects
-      url: "work#projects"
+      url: "work"
   
   - name: "Experience"
     icon: "fas fa-briefcase"

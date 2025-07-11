@@ -20,12 +20,12 @@ project_list:
   - name: "Automated High School Scheduling System"
     desc: |
       Reduced scheduling process from months to hours while minimizing conflicts for 1,600 students using mixed integer linear programming.
-    link: "work#high-school-project"
+    link: "work#automated-high-school-master-schedule-builder"
       
   - name: "Stormrider Innovation"
     desc: |
       Developed an innovative skateboard accessory that secured 2nd place in Invent Oregon competition with a $7.5K prize.
-    link: "work#stormrider-project"
+    link: "work#stormrider---data-driven-product-development"
       
 
 
