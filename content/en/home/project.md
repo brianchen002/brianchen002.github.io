@@ -13,7 +13,7 @@ title: Featured Projects
 subtitle:
 
 design:
-  columns: 1
+  columns: "1"
 
 project_list:
 
